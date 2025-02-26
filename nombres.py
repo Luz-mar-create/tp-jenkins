@@ -14,6 +14,6 @@ num2 = float(input("Entrez le 2ème nombre: "))
 somme, difference, moyenne = calculs(num1, num2)
 
 # Affichage des résultats
-print(f"Somme : {somme}")
-print(f"Différence : {difference}")
-print(f"Moyenne : {moyenne}")
+print(f"Somme : {somme:.2f}")
+print(f"Différence : {difference:.2f}")
+print(f"Moyenne : {moyenne:.2f}")
