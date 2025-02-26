@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-	    stage('from_git') {
+	    stage('Repository_git') {
             steps {
                   git url : 'https://github.com/Luz-mar-create/tp-jenkins' , branch : 'main'
             }
