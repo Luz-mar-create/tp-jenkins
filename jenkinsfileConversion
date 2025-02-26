@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    stages {
+	    stage('from_git') {
+            steps {
+                  git url : 'https://github.com/Luz-mar-create/tp-jenkins' , branch : 'main'
+            }
+        }
+        stage('Build') {
+            steps {
+				echo 'build python with .venv settings'
+                //sh 'python .....'
+				sh 'python conversion.py'
+            }
+        }
+		stage('Test') {
+            steps {
+				echo 'test python (pytest) with .venv settings'
+                //sh '.... && pytest ....'
+				sh 'pytest test_conversion.py'
+            }
+        }
+    }
+}
